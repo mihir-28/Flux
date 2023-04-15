@@ -1,0 +1,28 @@
+@startuml
+
+actor "Actor" as actor
+database "Database" as database
+participant "Chat Interface" as chatInterface
+participant "Selected User" as selectedUser
+
+activate actor
+actor -> database: Sign Up
+database -> database: Store User Data
+
+actor -> database: Login
+database --> actor: Validate Username and Password
+
+actor -> chatInterface: Select User
+activate chatInterface
+chatInterface -> chatInterface: Display Chat Interface
+deactivate chatInterface
+
+actor -> selectedUser: Send Message
+activate selectedUser
+selectedUser --> actor: Receive Message
+deactivate selectedUser
+
+actor -> database: Logout
+deactivate actor
+
+@enduml

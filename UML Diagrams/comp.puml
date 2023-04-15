@@ -1,0 +1,22 @@
+@startuml
+
+package "Chat Application" {
+  [User Interface]
+  [Authentication Component]
+  [Messaging Component]
+  [User Management Component]
+  [Database Component]
+}
+
+[User Interface] --> [Authentication Component]
+[User Interface] --> [Messaging Component]
+[User Interface] --> [User Management Component]
+[User Interface] --> [Database Component]
+
+[Authentication Component] --> [Database Component]
+
+[Messaging Component] --> [Database Component]
+
+[User Management Component] --> [Database Component]
+
+@enduml

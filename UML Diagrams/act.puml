@@ -1,0 +1,24 @@
+@startuml
+
+start
+:User signs up;
+:Data stored in database;
+if (Username and Password are valid?) then (yes)
+  :User logs in;
+  if (User selects a user and opens chat interface?) then (yes)
+    :User sends message;
+    if (User logs out of application?) then (yes)
+      :Logout;
+    else (no)
+      :Continue messaging;
+    endif
+  else (no)
+    :Continue browsing;
+  endif
+else (no)
+  :Show error message;
+endif
+
+stop
+
+@enduml

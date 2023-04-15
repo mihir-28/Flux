@@ -1,0 +1,21 @@
+@startuml
+entity "User" {
+  +user_id: int (PK)
+  unique_id: int
+  fname: varchar
+  lname: varchar
+  email: varchar
+  password: varchar
+  img: varchar
+  status: varchar
+}
+
+entity "Messages" {
+  +msg_id: int (PK)
+  incoming_msg_id: int
+  outgoing_msg_id: int
+  msg: varchar
+}
+
+User "1" -- "0..*" Messages
+@enduml

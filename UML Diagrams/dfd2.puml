@@ -1,0 +1,12 @@
+@startuml
+title Level 2 DFD
+
+[User] --> [Chat Application]
+[Chat Application] --> [Authentication Module]
+[Chat Application] --> [Messaging Module]
+[Authentication Module] --> [User Database]
+[Authentication Module] --> [Authentication Server]
+[Messaging Module] --> [Message Database]
+[Messaging Module] --> [Message Server]
+
+@enduml

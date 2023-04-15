@@ -1,0 +1,7 @@
+@startuml
+title Level 0 DFD
+
+[User] --> [Chat Application]
+[Chat Application] --> [Database]
+
+@enduml

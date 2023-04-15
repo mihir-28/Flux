@@ -1,0 +1,22 @@
+@startuml
+scale 800 width
+
+[*] --> LoggedOut: Start
+LoggedOut --> LoggingIn: Log in
+LoggingIn --> LoggedIn: Successful login
+LoggedIn --> LoggedOut: Log out
+LoggedOut --> SigningUp: Sign up
+SigningUp --> LoggedIn: Successful signup
+SigningUp --> LoggedOut: Cancel signup
+
+[*] --> Draft: Create
+Draft --> Composing: Start composing
+Composing --> Editing: Edit message
+Editing --> Composing: Cancel editing
+Composing --> Sending: Send message
+Sending --> Sent: Message sent
+Sent --> Delivered: Message delivered
+Delivered --> Read: Message read
+Read --> Delivered: Mark as unread
+
+@enduml
